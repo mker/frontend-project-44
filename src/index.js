@@ -1,6 +1,13 @@
 import readlineSync from 'readline-sync';
 
 const getRandom = (max) => Math.floor(Math.random() * max);
+
+const getRandomInRange = (start, end) => {
+  const min = Math.ceil(start);
+  const max = Math.floor(end);
+  return Math.floor(Math.random() * (max - min) + min);
+};
+
 const roundCount = 3;
 
 const defaultGame = (gameDescription, game) => {
@@ -20,11 +27,11 @@ const defaultGame = (gameDescription, game) => {
       console.log('Correct!');
     } else {
       return console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.\nLet's try again, ${userName}!`,
       );
     }
   }
   return console.log(`Congratulations, ${userName}!`);
 };
 
-export { defaultGame, getRandom };
+export { defaultGame, getRandom, getRandomInRange };
