@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+const roundCount = 3;
 const getRandom = (max) => Math.floor(Math.random() * max);
 
 const getRandomInRange = (start, end) => {
@@ -7,8 +8,6 @@ const getRandomInRange = (start, end) => {
   const max = Math.floor(end);
   return Math.floor(Math.random() * (max - min) + min);
 };
-
-const roundCount = 3;
 
 const defaultGame = (gameDescription, game) => {
   console.log('Welcome to the Brain Games!');
