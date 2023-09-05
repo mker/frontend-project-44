@@ -15,10 +15,12 @@ const progressionGame = () => {
     stepNumber += progStep;
     progression.push(stepNumber);
   }
-  const hiddenElementIndex = getRandomInRange(0, lastIndex);
+  const hiddenNumberIndex = getRandomInRange(0, lastIndex);
+  const hiddenNumber = progression[hiddenNumberIndex];
 
-  const question = progression.toSpliced(hiddenElementIndex, 1, '..');
-  const expectedAnswer = progression[hiddenElementIndex].toString();
+  progression[hiddenNumberIndex] = '..';
+  const question = progression.join(' ');
+  const expectedAnswer = hiddenNumber.toString();
 
   return [question, expectedAnswer];
 };
