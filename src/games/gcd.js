@@ -3,20 +3,15 @@ import { defaultGame, getRandom } from '../index.js';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (firstNumber, secondNumber) => {
-  let remainder = 0;
-  let numberA = firstNumber;
-  let numberB = secondNumber;
-  while (numberA % numberB > 0) {
-    remainder = numberA % numberB;
-    numberA = numberB;
-    numberB = remainder;
+  if (secondNumber === 0) {
+    return firstNumber;
   }
-  return remainder;
+  return findGcd(secondNumber, firstNumber % secondNumber);
 };
 
 const gcdGame = () => {
   const firstNumber = getRandom(100);
-  const secondNumber = getRandom(10);
+  const secondNumber = getRandom(100);
   let expectedAnswer = 0;
   const question = `${firstNumber} ${secondNumber}`;
 
