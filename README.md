@@ -44,7 +44,7 @@ Here are test runs for each game:
 [![asciicast](https://asciinema.org/a/606157.svg)](https://asciinema.org/a/606157)
 
 ### Brain-progression
-[![asciicast](https://asciinema.org/a/606184.svg)](https://asciinema.org/a/606184)
+[![asciicast](https://asciinema.org/a/606313.svg)](https://asciinema.org/a/606313)
 
 ### Brain-prime
 [![asciicast](https://asciinema.org/a/606206.svg)](https://asciinema.org/a/606206)
