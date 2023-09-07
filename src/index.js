@@ -1,14 +1,6 @@
 import readlineSync from 'readline-sync';
 
 const roundCount = 3;
-const getRandom = (max) => Math.floor(Math.random() * max);
-
-const getRandomInRange = (start, end) => {
-  const min = Math.ceil(start);
-  const max = Math.floor(end);
-  return Math.floor(Math.random() * (max - min) + min);
-};
-
 const defaultGame = (gameDescription, game) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -33,4 +25,4 @@ const defaultGame = (gameDescription, game) => {
   return console.log(`Congratulations, ${userName}!`);
 };
 
-export { defaultGame, getRandom, getRandomInRange };
+export default defaultGame;
